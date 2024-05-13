@@ -1,17 +1,9 @@
-alert("Olá! Espero que esteja bem!");
+let titulo = document.querySelector('h1');
+titulo.innerHTML = 'Jogo do número secreto';
 
-let nome = prompt("Qual seu nome");
-console.log(nome);
-let dia = prompt("Que dia é hoje?");
-let sexta = dia === 'sexta';
+let paragrafo = document.querySelector('p');
+paragrafo.innerHTML = 'Escolha um número entre 1 e 10';
 
-if (
-  (dia === "sabado" || dia === "domingo")
-) {
-  console.log(nome + " bom final de semana!");
-} else {
-  if (sexta) console.log(nome + " sextou! Bora tomar uma!");
-  else {
-    nome + " Boa semana";
-  }
-}
+function verificarChute() {
+  console.log ('o botão foi clicado');
+} 
