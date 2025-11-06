@@ -15,6 +15,14 @@ exibirMensagemInicial();
 
 function verificarChute() {
   let chute = parseInt(document.querySelector("input").value);
+  
+  // Validação de entrada
+  if (isNaN(chute) || chute < 1 || chute > 10) {
+    exibirTextoNaTela("p", "Por favor, digite um número entre 1 e 10!");
+    limparCampo();
+    return;
+  }
+  
   if (chute === numeroSecreto) {
     exibirTextoNaTela("h1", "Acertou!");
     let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
@@ -37,7 +45,7 @@ function gerarNumeroAleatorio() {
 }
 
 function limparCampo() {
-  chute = document.querySelector("input");
+  let chute = document.querySelector("input");
   chute.value = "";
 }
 
